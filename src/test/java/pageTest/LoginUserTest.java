@@ -11,7 +11,7 @@ public class LoginUserTest extends BaseTest {
     public void standartUser(){
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
-        MainPage mainPage = loginPage.logIn("standard_user","secret_sauce");
+        MainPage mainPage = loginPage.logIn(username,password);
         Assert.assertTrue(mainPage.isCartButton());
     }
 }
