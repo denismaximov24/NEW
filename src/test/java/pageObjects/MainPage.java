@@ -18,4 +18,12 @@ public class MainPage extends BasePage {
         }
         return true;
     }
+    public boolean isErrorMessage() {
+        try {
+            wait.until(x->x.findElement(By.cssSelector("[class=\"error-message-container error\"]")));
+        } catch (TimeoutException err) {
+            return false;
+        }
+        return true;
+    }
 }

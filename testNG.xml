@@ -12,6 +12,7 @@
             <class name="pageTest.LoginUserTest">
                 <methods>
                     <include name="standartUser"/>
+                    <include name="lockedOutUser"/>
                 </methods>
             </class> <!-- pageTest.LoginUserTest -->
         </classes>

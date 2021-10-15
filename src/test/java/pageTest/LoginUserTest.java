@@ -14,4 +14,11 @@ public class LoginUserTest extends BaseTest {
         MainPage mainPage = loginPage.logIn(username,password);
         Assert.assertTrue(mainPage.isCartButton());
     }
+    @Test
+    public void lockedOutUser(){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.open();
+        MainPage mainPage = loginPage.logIn("locked_out_user",password);
+        Assert.assertTrue(mainPage.isErrorMessage());
+    }
 }
